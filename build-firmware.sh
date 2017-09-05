@@ -8,7 +8,7 @@ ELFFILE=build/trezor-$TAG.elf
 
 docker build -t $IMAGE .
 docker run -t -v $(pwd)/build:/build:z $IMAGE /bin/sh -c "\
-	git clone https://github.com/trezor/trezor-mcu && \
+	git clone https://github.com/cryptcoin-junkey/trezor-mcu && \
 	cd trezor-mcu && \
 	git checkout $TAG && \
 	git submodule update --init && \
